@@ -1,0 +1,13 @@
+#	OpenOCD Target Script for Atmel AT91SAM7S256
+#
+#	Programmer: James P Lynch
+#
+
+wait_halt							# halt the processor and wait
+armv4_5 core_state arm				# select the core state
+
+flash info 0
+flash protect 0 0 15 off         # clear all lock bits
+
+reset								# reset processor
+shutdown							# stop OpenOCD
