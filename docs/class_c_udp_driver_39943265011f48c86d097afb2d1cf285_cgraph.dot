@@ -1,0 +1,43 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  rankdir=LR;
+  Node1 [label="CUdpDriver::Attach",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node2 [label="USB::CUsbDriver::ClearState",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_usb_driver.html#1aab07c6a713076a742c535c0dec3d38",tooltip="Clear flag(s) in dStatus register. If the method is called without arguments, it..."];
+  Node1 -> Node3 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node3 [label="CUdpDriver::Connect",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#9721403973d6af1963a444ab7c8ca162",tooltip="Connects the device to the USB."];
+  Node3 -> Node4 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node4 [label="USB::CBoard::ConnectPullUp",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_board.html#5550fe5459fe574a081e2a9169902855",tooltip="Enables the external pull-up on D+ associated with the specified USB controller."];
+  Node1 -> Node5 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node5 [label="CUdpDriver::DisableEndpoints",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#0054634921075da975122a537e1b6bca",tooltip="Disable all endpoints (except control endpoint 0), aborting current transfers if..."];
+  Node5 -> Node6 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node6 [label="USB::CEndpoint::EndOfTransfer",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_endpoint.html#3bd504d483b3e015cee4d1ebbc02dc1f",tooltip="Invokes the callback associated with a finished transfer on an endpoint."];
+  Node1 -> Node7 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node7 [label="CUdpDriver::DisableMCK",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#649855193003a419cd39c5a66fa30503",tooltip="Disables the peripheral clock of the USB controller associated with the specified..."];
+  Node1 -> Node8 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node8 [label="CUdpDriver::DisableTransceiver",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#5e1d3b5c810e5a6cc75b8b0e5038ec43",tooltip="Disables the transceiver of the USB controller associated with the specified USB..."];
+  Node1 -> Node9 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node9 [label="CUdpDriver::DisableUDPCK",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#7bff10dc4515c32a205d274728ed7681",tooltip="Disables the 48MHz clock of the USB controller associated with the specified USB..."];
+  Node1 -> Node10 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node10 [label="CUdpDriver::Disconnect",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#a42ff5ccc0e5a31aee80d2d837ccf67f",tooltip="Disconnects the device from the USB."];
+  Node10 -> Node2 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node10 -> Node11 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node11 [label="USB::CBoard::DisconnectPullUp",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_board.html#da0b27b342d2be38a79afae503469d69",tooltip="Disables the external pull-up on D+ associated with the specified USB controller..."];
+  Node1 -> Node12 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node12 [label="CUdpDriver::EnableMCK",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#57f192544cb44433586de297a23747ca",tooltip="Enables the peripheral clock of the USB controller associated with the specified..."];
+  Node1 -> Node13 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node13 [label="CUdpDriver::EnableUDPCK",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#473b05382c7ea862fdc3f195deed2f76",tooltip="Enables the 48MHz clock of the USB controller associated with the specified USB driver..."];
+  Node1 -> Node14 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node14 [label="USB::CUsbDriver::IsStateSet",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_usb_driver.html#ba060d49b6d1b7150245405dec92a2e2",tooltip="Poll the status of flags in dStatus register."];
+  Node1 -> Node15 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node15 [label="USB::CBoard::IsVBusConnected",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_board.html#297c9c1af35a42a7af02db149f37f098",tooltip="Indicates the state of the VBus power line associated with the specified interface..."];
+  Node1 -> Node16 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node16 [label="USB::CEventSink::OnResume",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_event_sink.html#8fc43e92b17a2f78210d5589dc5fd5aa",tooltip="Resume callback function."];
+  Node1 -> Node17 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node17 [label="USB::CEventSink::OnSuspend",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_event_sink.html#0a3d24d72b781f87e39d873cfda6dd9c",tooltip="Suspend callback function."];
+  Node1 -> Node18 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node18 [label="USB::CUsbDriver::SetState",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_usb_driver.html#a64fb09dc12bfcd63241ed9f8cd282d9",tooltip="Set flag(s) in dStatus register."];
+}

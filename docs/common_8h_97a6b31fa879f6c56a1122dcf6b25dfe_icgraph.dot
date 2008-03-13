@@ -1,0 +1,35 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  rankdir=LR;
+  Node1 [label="min",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node2 [label="USB::CSTD::GetConfigurationDescriptor",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_s_t_d.html#c1a2be83c099f8a4773758d379346fca",tooltip="Sends the configuration descriptor to the host."];
+  Node2 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node3 [label="USB::CSTD::RequestHandler",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_s_t_d.html#e38a077457b22283969b6f5a270e9c2d",tooltip="Handles standard SETUP requests."];
+  Node3 -> Node4 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node4 [label="USB::CCDC::RequestHandler",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_c_d_c.html#825e8609b22bf0012d10a81248ff1bc5",tooltip="SETUP request handler for an Abstract Control Model device."];
+  Node4 -> Node5 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node5 [label="anonymous_namespace\{usbCallbacks::cpp\}::CCallbacks::OnNewRequest",height=0.2,width=0.4,color="black",URL="$classanonymous__namespace_02usb_callbacks_8cpp_03_1_1_c_callbacks.html#7dddf154c6c46790c76ece15a6338c81",tooltip="New Request callback function."];
+  Node1 -> Node6 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node6 [label="USB::CSTD::GetDeviceDescriptor",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_s_t_d.html#64390a146f8b0a0f8b59071730ced8d1",tooltip="Sends the device descriptor to the host."];
+  Node6 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node1 -> Node7 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node7 [label="CUdpDriver::GetPayload",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#fe791e9ab368f8413d2323b95a409460",tooltip="Transfers a data payload from an endpoint FIFO to the current transfer buffer."];
+  Node7 -> Node8 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node8 [label="CUdpDriver::EndpointHandler",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#2654684e8906700c508d3f10d133404a",tooltip="Endpoint interrupt handler. Handle IN/OUT transfers, received SETUP packets and STALLing..."];
+  Node8 -> Node9 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node9 [label="CUdpDriver::EventHandler",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#df47754ef8128230c4cefa247265a305",tooltip="Event handler for the USB controller peripheral."];
+  Node7 -> Node10 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node10 [label="CUdpDriver::Read",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#26eb83a7a04131c8f7c529ee3fcad846",tooltip="Receives data on the specified USB endpoint."];
+  Node1 -> Node11 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node11 [label="USB::CSTD::GetStringDescriptor",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_s_t_d.html#1f7d664b3ca71f74cab096f6913e4b56",tooltip="Sends the specified string descriptor to the host."];
+  Node11 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node1 -> Node12 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node12 [label="CUdpDriver::WritePayload",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#aa4e67dd65350793ee1db8fde2f5cb7b",tooltip="Transfers a data payload from the current tranfer buffer to the endpoint FIFO."];
+  Node12 -> Node8 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node12 -> Node13 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node13 [label="CUdpDriver::Write",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#a7721b2c4e62455efceb0f3c29a24b2a",tooltip="Sends data through an USB endpoint."];
+}

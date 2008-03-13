@@ -1,0 +1,9 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  Node1 [label="{anonymous_namespace\{usbCallbacks.cpp\}::CCallbacks\n|- pDriver\l|+ CCallbacks()\l- OnInit()\l- OnReset()\l- OnSuspend()\l- OnResume()\l- OnNewRequest()\l- OnStartOfFrame()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="midnightblue",fontsize=10,style="solid",arrowtail="empty",fontname="FreeSans"];
+  Node2 [label="{USB::CEventSink\n||+ OnInit()\l+ OnReset()\l+ OnSuspend()\l+ OnResume()\l+ OnNewRequest()\l+ OnStartOfFrame()\l}",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_event_sink.html",tooltip="Abstract class that declares various event sinks (callbacks) called by the USB low-level..."];
+}

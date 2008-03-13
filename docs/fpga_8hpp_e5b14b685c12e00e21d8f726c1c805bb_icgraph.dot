@@ -1,0 +1,14 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  rankdir=LR;
+  Node1 [label="FPGA_PulseReset",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node2 [label="XPI::InitializeFPGA",height=0.2,width=0.4,color="black",URL="$class_x_p_i.html#13617d172b308c1448c74f4535b2e73d"];
+  Node2 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node3 [label="USBRCVR::Receiver",height=0.2,width=0.4,color="black",URL="$class_u_s_b_r_c_v_r.html#f8361a896588ddbb643a4b79b59129b5"];
+  Node3 -> Node4 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node4 [label="portTASK_FUNCTION",height=0.2,width=0.4,color="black",URL="$usb_tasks_8cpp.html#bf532eb4d4d55d51477ea9534ab711ca"];
+}

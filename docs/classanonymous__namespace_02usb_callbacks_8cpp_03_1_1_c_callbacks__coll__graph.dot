@@ -1,0 +1,18 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  Node1 [label="{anonymous_namespace\{usbCallbacks.cpp\}::CCallbacks\n|- pDriver\l|+ CCallbacks()\l- OnInit()\l- OnReset()\l- OnSuspend()\l- OnResume()\l- OnNewRequest()\l- OnStartOfFrame()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="midnightblue",fontsize=10,style="solid",arrowtail="empty",fontname="FreeSans"];
+  Node2 [label="{USB::CEventSink\n||+ OnInit()\l+ OnReset()\l+ OnSuspend()\l+ OnResume()\l+ OnNewRequest()\l+ OnStartOfFrame()\l}",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_event_sink.html",tooltip="Abstract class that declares various event sinks (callbacks) called by the USB low-level..."];
+  Node3 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="pDriver",arrowtail="open",fontname="FreeSans"];
+  Node3 [label="{USB::CUsbDriver\n|# pEventSink\l# pBoard\l# pEndpoints\l# dNumEndpoints\l# sSetup\l# dState\l# useSOFCallback\l|+ GetInterface()\l+ GetDriverID()\l+ Init()\l+ Write()\l+ Read()\l+ Stall()\l+ Halt()\l+ RemoteWakeUp()\l+ ConfigureEndpoint()\l+ Attach()\l+ SetAddress()\l+ SetConfiguration()\l+ EventHandler()\l+ Connect()\l+ Disconnect()\l+ LinkTo()\l+ GetSetup()\l+ IsStateSet()\l+ IsStateCleared()\l+ GetNumEndpoints()\l+ SetEndpointList()\l+ SendZLP0()\l# CUsbDriver()\l# SetState()\l# ClearState()\l}",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_usb_driver.html",tooltip="Low-level USB device driver abstract class."];
+  Node4 -> Node3 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="pEndpoints",arrowtail="open",fontname="FreeSans"];
+  Node4 [label="{USB::CEndpoint\n|+ pData\l+ pDataLowerBound\l+ pDataUpperBound\l+ dBytesRemaining\l+ dBytesBuffered\l+ dBytesTransferred\l+ bCompletePacket\l+ fCallback\l+ pArgument\l+ wMaxPacketSize\l+ dFlag\l+ dNumFIFO\l+ dState\l|+ CEndpoint()\l+ Init()\l+ EndOfTransfer()\l}",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_endpoint.html",tooltip="This class is used to track the current status of an endpoint, i.e. the current transfer..."];
+  Node5 -> Node3 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="pBoard",arrowtail="open",fontname="FreeSans"];
+  Node5 [label="{USB::CBoard\n||+ IsVBusConnected()\l+ ConnectPullUp()\l+ DisconnectPullUp()\l+ IsPullUpConnected()\l+ ConfigurePullUp()\l+ ConfigureVBus()\l}",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_board.html",tooltip="Abstract class that declares board specific control of D+ pull up and VBUS detection..."];
+  Node2 -> Node3 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="pEventSink",arrowtail="open",fontname="FreeSans"];
+  Node6 -> Node3 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="sSetup",arrowtail="open",fontname="FreeSans"];
+  Node6 [label="{USB::S_usb_request\n|+ bmRequestType\l+ bRequest\l+ wValue\l+ wIndex\l+ wLength\l|}",height=0.2,width=0.4,color="black",URL="$struct_u_s_b_1_1_s__usb__request.html",tooltip="USB Standard Structures."];
+}

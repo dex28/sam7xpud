@@ -1,0 +1,26 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  rankdir=LR;
+  Node1 [label="USB::CEndpoint::EndOfTransfer",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node2 [label="CUdpDriver::ConfigureEndpoint",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#f4d41ab77f6c6c68dbb0af8c548c726f",tooltip="Configures the specified endpoint using the provided endpoint descriptor."];
+  Node2 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node3 [label="CUdpDriver::EventHandler",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#df47754ef8128230c4cefa247265a305",tooltip="Event handler for the USB controller peripheral."];
+  Node1 -> Node4 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node4 [label="CUdpDriver::DisableEndpoints",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#0054634921075da975122a537e1b6bca",tooltip="Disable all endpoints (except control endpoint 0), aborting current transfers if..."];
+  Node4 -> Node5 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node5 [label="CUdpDriver::Attach",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#39943265011f48c86d097afb2d1cf285",tooltip="Handles the attachment or detachment of the device to or from the USB."];
+  Node4 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node4 -> Node6 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node6 [label="CUdpDriver::SetConfiguration",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#53ff5988e2dc0f5e780d056e55e28283",tooltip="Sets the device configuration using the last received SETUP packet."];
+  Node1 -> Node7 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node7 [label="CUdpDriver::EndpointHandler",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#2654684e8906700c508d3f10d133404a",tooltip="Endpoint interrupt handler. Handle IN/OUT transfers, received SETUP packets and STALLing..."];
+  Node7 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node1 -> Node8 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node8 [label="CUdpDriver::Halt",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#731233a0654277219ef0148319c0761e",tooltip="Clears, sets or retrieves the halt state of the specified endpoint."];
+  Node1 -> Node9 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node9 [label="CUdpDriver::Read",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#26eb83a7a04131c8f7c529ee3fcad846",tooltip="Receives data on the specified USB endpoint."];
+}

@@ -1,0 +1,14 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  rankdir=LR;
+  Node1 [label="CUdpDriver::Halt",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node2 [label="CUdpDriver::ClearEndpointFlags",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#1c4166268dbce6fad2de3eeb89aaf82d",tooltip="Clear flags in the UDP_CSR register and waits for synchronization."];
+  Node1 -> Node3 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node3 [label="USB::CEndpoint::EndOfTransfer",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_endpoint.html#3bd504d483b3e015cee4d1ebbc02dc1f",tooltip="Invokes the callback associated with a finished transfer on an endpoint."];
+  Node1 -> Node4 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node4 [label="CUdpDriver::SetEndpointFlags",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#6aa2661dfca334908398ec3a324f65f4",tooltip="Set flags in the UDP_CSR register and waits for synchronization."];
+}

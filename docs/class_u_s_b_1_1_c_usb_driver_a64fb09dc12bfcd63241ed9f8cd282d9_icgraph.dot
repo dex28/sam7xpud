@@ -1,0 +1,18 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  rankdir=LR;
+  Node1 [label="USB::CUsbDriver::SetState",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node2 [label="CUdpDriver::Attach",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#39943265011f48c86d097afb2d1cf285",tooltip="Handles the attachment or detachment of the device to or from the USB."];
+  Node1 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node3 [label="CUdpDriver::EventHandler",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#df47754ef8128230c4cefa247265a305",tooltip="Event handler for the USB controller peripheral."];
+  Node1 -> Node4 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node4 [label="CUdpDriver::Init",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#470ca17d526df70db31441ef23325dd4",tooltip="Initializes the USB API and the USB controller."];
+  Node1 -> Node5 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node5 [label="CUdpDriver::SetAddress",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#292d51e33ec7a054206e69b3b9395ef4",tooltip="Sets the device address using the last received SETUP packet. This method must only..."];
+  Node1 -> Node6 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node6 [label="CUdpDriver::SetConfiguration",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#53ff5988e2dc0f5e780d056e55e28283",tooltip="Sets the device configuration using the last received SETUP packet."];
+}

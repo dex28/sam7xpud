@@ -1,0 +1,9 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  Node1 [label="{XSVF_Class\n|- mTraceLevel\l- mParseOnly\l- mComplete\l- mCommand\l- mCommandCount\l- mErrorCode\l- mTapState\l- mTapStateEndIR\l- mTapStateEndDR\l- mMaxRepeat\l- mRunTestTime\l- mShiftLengthBits\l- mShiftLengthBytes\l- lvTdi\l- lvTdoExpected\l- lvTdoCaptured\l- lvTdoMask\l- lvAddressMask\l- lvDataMask\l- lvNextData\l- pzCommandName\l- pzTapState\l- pzErrorName\l|+ XSVF_Class()\l+ Initialize()\l+ Run()\l- GotoTapState()\l- ShiftOnly()\l- Shift()\l- BasicXSDRTDO()\l- DoSDRMasking()\l- Do_ILLEGALCMD()\l- Do_XCOMPLETE()\l- Do_XTDOMASK()\l- Do_XSIR()\l- Do_XSIR2()\l- Do_XSDR()\l- Do_XRUNTEST()\l- Do_XREPEAT()\l- Do_XSDRSIZE()\l- Do_XSDRTDO()\l- Do_XSETSDRMASKS()\l- Do_XSDRINC()\l- Do_XSDRBCE()\l- Do_XSDRTDOBCE()\l- Do_XSTATE()\l- Do_XENDXR()\l- Do_XCOMMENT()\l- Do_XWAIT()\l- GetAsNumBytes()\l- TmsTransition()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="lvTdoMask\nlvTdoCaptured\nlvNextData\nlvDataMask\nlvTdi\nlvTdoExpected\nlvAddressMask",arrowtail="open",fontname="FreeSans"];
+  Node2 [label="{OctetArray\n|+ len\l+ val\l|+ GetValue()\l+ IsEqual()\l+ ReadXSVF()\l+ Add()\l}",height=0.2,width=0.4,color="black",URL="$struct_octet_array.html"];
+}

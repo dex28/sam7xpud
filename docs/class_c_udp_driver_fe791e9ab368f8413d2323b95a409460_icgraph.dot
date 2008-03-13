@@ -1,0 +1,14 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  rankdir=LR;
+  Node1 [label="CUdpDriver::GetPayload",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node2 [label="CUdpDriver::EndpointHandler",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#2654684e8906700c508d3f10d133404a",tooltip="Endpoint interrupt handler. Handle IN/OUT transfers, received SETUP packets and STALLing..."];
+  Node2 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node3 [label="CUdpDriver::EventHandler",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#df47754ef8128230c4cefa247265a305",tooltip="Event handler for the USB controller peripheral."];
+  Node1 -> Node4 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node4 [label="CUdpDriver::Read",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#26eb83a7a04131c8f7c529ee3fcad846",tooltip="Receives data on the specified USB endpoint."];
+}

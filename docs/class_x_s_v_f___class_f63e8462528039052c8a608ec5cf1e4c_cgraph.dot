@@ -1,0 +1,25 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  rankdir=LR;
+  Node1 [label="XSVF_Class::Do_XREPEAT",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node2 [label="ReadXSVF",height=0.2,width=0.4,color="black",URL="$xsvf_port_8hpp.html#eead376a8e9b9d8b83d3f95f0b440ecc"];
+  Node2 -> Node3 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node3 [label="XSVF_Player::getc",height=0.2,width=0.4,color="black",URL="$class_x_s_v_f___player.html#30c853edaf50b1a4d677131bdb78d277"];
+  Node3 -> Node4 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node4 [label="XSVF_Player::CRC16",height=0.2,width=0.4,color="black",URL="$class_x_s_v_f___player.html#493d16eed95c4ea70c1026758c45bcf9"];
+  Node3 -> Node5 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node5 [label="xSEMA::Release",height=0.2,width=0.4,color="black",URL="$classx_s_e_m_a.html#21e114e5918da00fc1d5ce9b285f5e2b"];
+  Node5 -> Node6 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node6 [label="xSEMA::Lock",height=0.2,width=0.4,color="black",URL="$classx_s_e_m_a.html#f672373f4e74bc17689036721587a6f1"];
+  Node3 -> Node7 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node7 [label="xSEMA::Wait",height=0.2,width=0.4,color="black",URL="$classx_s_e_m_a.html#d398bc33f1c28f28c33ce1796b0e4ca7"];
+  Node7 -> Node8 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node8 [label="xSEMA::DoesSemaContains",height=0.2,width=0.4,color="black",URL="$classx_s_e_m_a.html#b04acaa143ecfad200784197b075a8a8"];
+  Node7 -> Node6 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node7 -> Node9 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node9 [label="xSEMA::Unlock",height=0.2,width=0.4,color="black",URL="$classx_s_e_m_a.html#b2457b1a08f5ef2bc40524d0e2c306bc"];
+}

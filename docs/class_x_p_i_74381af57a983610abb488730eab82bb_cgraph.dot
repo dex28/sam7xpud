@@ -1,0 +1,16 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  rankdir=LR;
+  Node1 [label="XPI::DumpStatus",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node2 [label="xSEMA::GetCount",height=0.2,width=0.4,color="black",URL="$classx_s_e_m_a.html#173d61ea89795127bcbebd110616f944"];
+  Node1 -> Node3 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node3 [label="XSVF_Player::GetLastRC",height=0.2,width=0.4,color="black",URL="$class_x_s_v_f___player.html#6fa3bf4ec56d838ad09c3f0e43a8342e"];
+  Node1 -> Node4 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node4 [label="tracef",height=0.2,width=0.4,color="black",URL="$trace_8h.html#a992713b67dd2ec12eddb0ca609e13ab"];
+  Node4 -> Node5 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node5 [label="isDigit",height=0.2,width=0.4,color="black",URL="$stdio_8cpp.html#6dc444c99c5adf684e2e9ac2a85d71d0"];
+}

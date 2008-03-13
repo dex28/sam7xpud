@@ -1,0 +1,19 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  Node1 [label="{XPI\n|- semaMutex\l- semaFull\l- semaEmpty\l- semaSent\l- buf\l- bufSize\l- pRead\l- pWrite\l- pMax\l- ctx_count\l- pCtx\l- ctx_status\l- fpgaOK\l- isMCPU\l- boardPos\l- maxboardc\l- traceMask\l- state\l- lastTick\l- timer\l- isEIRQ\l- isCTXE\l- poll_list\l- poll_cur\l- poll_active_cnt\l- rearrange_poll_list\l- eirq_count\l- stuck_eirq_count\l- sMsg\l- sCTX\l- ctxLen\l- ctxCkSum\l- sCRX\l- crxLen\l- crxCkSum\l- requestID\l|+ IsFpgaOK()\l+ XPI()\l+ SetTraceMask()\l+ DumpStatus()\l+ ResetFPGA()\l+ InitializeFPGA()\l+ Put()\l+ Transmitter()\l+ StartTransmissionIfIdle()\l+ portTASK_FUNCTION()\l- portTASK_FUNCTION()\l- LockWrite()\l- UnlockWrite()\l- Goto()\l- GetNextTimeout()\l- ResetPollList()\l- RearrangePollList()\l- MarkBoardActive()\l- PollNextBoard()\l- On_CTXE()\l- On_CTX()\l- On_CRX()\l- On_EIRQ()\l- On_FC()\l- On_Timer()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="sMsg",arrowtail="open",fontname="FreeSans"];
+  Node2 [label="{XPI_SHORT_MSG\n|+ data\l|}",height=0.2,width=0.4,color="black",URL="$struct_x_p_i___s_h_o_r_t___m_s_g.html"];
+  Node3 -> Node2 [dir=back,color="midnightblue",fontsize=10,style="solid",arrowtail="empty",fontname="FreeSans"];
+  Node3 [label="{XPI_IMSG_HEADER\n|+ magicMSB\l+ magicLSB\l+ type\l+ subtype\l+ timeStamp\l|}",height=0.2,width=0.4,color="black",URL="$struct_x_p_i___i_m_s_g___h_e_a_d_e_r.html"];
+  Node4 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="semaEmpty\nsemaSent\nsemaFull",arrowtail="open",fontname="FreeSans"];
+  Node4 [label="{xSEMA\n|# isMutex\l# pxMutexHolder\l# xItemCount\l# xTxLock\l# xTasksWaitingToReceive\l|+ GetCount()\l+ xSEMA()\l+ Release()\l+ ReleaseFromISR()\l+ Wait()\l+ WaitFromISR()\l+ operator new()\l+ operator delete()\l# Lock()\l# Unlock()\l# DoesSemaContains()\l}",height=0.2,width=0.4,color="black",URL="$classx_s_e_m_a.html"];
+  Node5 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="semaMutex",arrowtail="open",fontname="FreeSans"];
+  Node5 [label="{xMUTEX\n||+ xMUTEX()\l+ Lock()\l+ Unlock()\l}",height=0.2,width=0.4,color="black",URL="$classx_m_u_t_e_x.html"];
+  Node4 -> Node5 [dir=back,color="midnightblue",fontsize=10,style="solid",arrowtail="empty",fontname="FreeSans"];
+  Node6 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="sCTX\nsCRX",arrowtail="open",fontname="FreeSans"];
+  Node6 [label="{XPI_LONG_MSG\n|+ data\l|}",height=0.2,width=0.4,color="black",URL="$struct_x_p_i___l_o_n_g___m_s_g.html"];
+  Node3 -> Node6 [dir=back,color="midnightblue",fontsize=10,style="solid",arrowtail="empty",fontname="FreeSans"];
+}

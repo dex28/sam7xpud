@@ -1,0 +1,12 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  Node1 [label="{USBXMTR\n|- semaMutex\l- semaFull\l- semaEmpty\l- semaSent\l- buf\l- bufSize\l- pRead\l- pWrite\l- pMax\l- bStatus\l- dBytesTransferred\l- dBytesRemaining\l|+ USBXMTR()\l+ Initialize()\l+ LockWrite()\l+ UnlockWrite()\l+ Put()\l+ Transmitter()\l+ portTASK_FUNCTION()\l- OnSendCompleted()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="semaEmpty\nsemaSent\nsemaFull",arrowtail="open",fontname="FreeSans"];
+  Node2 [label="{xSEMA\n|# isMutex\l# pxMutexHolder\l# xItemCount\l# xTxLock\l# xTasksWaitingToReceive\l|+ GetCount()\l+ xSEMA()\l+ Release()\l+ ReleaseFromISR()\l+ Wait()\l+ WaitFromISR()\l+ operator new()\l+ operator delete()\l# Lock()\l# Unlock()\l# DoesSemaContains()\l}",height=0.2,width=0.4,color="black",URL="$classx_s_e_m_a.html"];
+  Node3 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="semaMutex",arrowtail="open",fontname="FreeSans"];
+  Node3 [label="{xMUTEX\n||+ xMUTEX()\l+ Lock()\l+ Unlock()\l}",height=0.2,width=0.4,color="black",URL="$classx_m_u_t_e_x.html"];
+  Node2 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",arrowtail="empty",fontname="FreeSans"];
+}

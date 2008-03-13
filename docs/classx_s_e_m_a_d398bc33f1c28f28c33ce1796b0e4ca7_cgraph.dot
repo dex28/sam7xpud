@@ -1,0 +1,14 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  rankdir=LR;
+  Node1 [label="xSEMA::Wait",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node2 [label="xSEMA::DoesSemaContains",height=0.2,width=0.4,color="black",URL="$classx_s_e_m_a.html#b04acaa143ecfad200784197b075a8a8"];
+  Node1 -> Node3 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node3 [label="xSEMA::Lock",height=0.2,width=0.4,color="black",URL="$classx_s_e_m_a.html#f672373f4e74bc17689036721587a6f1"];
+  Node1 -> Node4 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node4 [label="xSEMA::Unlock",height=0.2,width=0.4,color="black",URL="$classx_s_e_m_a.html#b2457b1a08f5ef2bc40524d0e2c306bc"];
+}

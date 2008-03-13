@@ -1,0 +1,23 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  Node1 [label="{USB::S_ser_configuration_descriptor\n|+ sCfg\l+ sCommunication\l+ sHeader\l+ sCallManagement\l+ sAbstract\l+ sUnion\l+ sNotification\l+ sData\l+ sDataOut\l+ sDataIn\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="sUnion",arrowtail="open",fontname="FreeSans"];
+  Node2 [label="{USB::S_cdc_union_1slave_descriptor\n|+ sUnion\l+ bSlaveInterfaces\l|}",height=0.2,width=0.4,color="black",URL="$struct_u_s_b_1_1_s__cdc__union__1slave__descriptor.html",tooltip="Union functional descriptors with one slave interface."];
+  Node3 -> Node2 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="sUnion",arrowtail="open",fontname="FreeSans"];
+  Node3 [label="{USB::S_cdc_union_descriptor\n|+ bFunctionLength\l+ bDescriptorType\l+ bDescriptorSubtype\l+ bMasterInterface\l|}",height=0.2,width=0.4,color="black",URL="$struct_u_s_b_1_1_s__cdc__union__descriptor.html",tooltip="Union functional descriptors."];
+  Node4 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="sData\nsCommunication",arrowtail="open",fontname="FreeSans"];
+  Node4 [label="{USB::S_usb_interface_descriptor\n|+ bLength\l+ bDescriptorType\l+ bInterfaceNumber\l+ bAlternateSetting\l+ bNumEndpoints\l+ bInterfaceClass\l+ bInterfaceSubClass\l+ bInterfaceProtocol\l+ iInterface\l|}",height=0.2,width=0.4,color="black",URL="$struct_u_s_b_1_1_s__usb__interface__descriptor.html",tooltip="Standard interface descriptor. Used to describe a specific interface of a configuration..."];
+  Node5 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="sCallManagement",arrowtail="open",fontname="FreeSans"];
+  Node5 [label="{USB::S_cdc_call_management_descriptor\n|+ bFunctionLength\l+ bDescriptorType\l+ bDescriptorSubtype\l+ bmCapabilities\l+ bDataInterface\l|}",height=0.2,width=0.4,color="black",URL="$struct_u_s_b_1_1_s__cdc__call__management__descriptor.html",tooltip="Call management functional descriptor."];
+  Node6 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="sHeader",arrowtail="open",fontname="FreeSans"];
+  Node6 [label="{USB::S_cdc_header_descriptor\n|+ bFunctionLength\l+ bDescriptorType\l+ bDescriptorSubtype\l+ bcdCDC\l|}",height=0.2,width=0.4,color="black",URL="$struct_u_s_b_1_1_s__cdc__header__descriptor.html",tooltip="Header functional descriptor."];
+  Node7 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="sAbstract",arrowtail="open",fontname="FreeSans"];
+  Node7 [label="{USB::S_cdc_abstract_control_management_descriptor\n|+ bFunctionLength\l+ bDescriptorType\l+ bDescriptorSubtype\l+ bmCapabilities\l|}",height=0.2,width=0.4,color="black",URL="$struct_u_s_b_1_1_s__cdc__abstract__control__management__descriptor.html",tooltip="Abstract control management functional descriptor."];
+  Node8 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="sDataOut\nsDataIn\nsNotification",arrowtail="open",fontname="FreeSans"];
+  Node8 [label="{USB::S_usb_endpoint_descriptor\n|+ bLength\l+ bDescriptorType\l+ bEndpointAddress\l+ bmAttributes\l+ wMaxPacketSize\l+ bInterval\l|}",height=0.2,width=0.4,color="black",URL="$struct_u_s_b_1_1_s__usb__endpoint__descriptor.html",tooltip="This structure is the standard endpoint descriptor. It contains the necessary information..."];
+  Node9 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="sCfg",arrowtail="open",fontname="FreeSans"];
+  Node9 [label="{USB::S_usb_configuration_descriptor\n|+ bLength\l+ bDescriptorType\l+ wTotalLength\l+ bNumInterfaces\l+ bConfigurationValue\l+ iConfiguration\l+ bmAttibutes\l+ bMaxPower\l|}",height=0.2,width=0.4,color="black",URL="$struct_u_s_b_1_1_s__usb__configuration__descriptor.html",tooltip="This is the standard configuration descriptor structure. It is used to report the..."];
+}

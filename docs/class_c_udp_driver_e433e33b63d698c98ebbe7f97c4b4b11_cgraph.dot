@@ -1,0 +1,14 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  rankdir=LR;
+  Node1 [label="CUdpDriver::RemoteWakeUp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node2 [label="CUdpDriver::EnableMCK",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#57f192544cb44433586de297a23747ca",tooltip="Enables the peripheral clock of the USB controller associated with the specified..."];
+  Node1 -> Node3 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node3 [label="CUdpDriver::EnableTransceiver",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#7780c2dd587f40f5b4749b8de3e9cb16",tooltip="Enables the transceiver of the USB controller associated with the specified USB driver..."];
+  Node1 -> Node4 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node4 [label="CUdpDriver::EnableUDPCK",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#473b05382c7ea862fdc3f195deed2f76",tooltip="Enables the 48MHz clock of the USB controller associated with the specified USB driver..."];
+}

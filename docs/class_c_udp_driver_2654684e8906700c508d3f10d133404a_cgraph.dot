@@ -1,0 +1,26 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  rankdir=LR;
+  Node1 [label="CUdpDriver::EndpointHandler",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node2 [label="CUdpDriver::ClearEndpointFlags",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#1c4166268dbce6fad2de3eeb89aaf82d",tooltip="Clear flags in the UDP_CSR register and waits for synchronization."];
+  Node1 -> Node3 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node3 [label="CUdpDriver::ClearRXFlag",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#37b567c9205c8d3e2bdb3259123fcb05",tooltip="Clears the correct RX flag in an endpoint status register."];
+  Node3 -> Node2 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node1 -> Node4 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node4 [label="USB::CEndpoint::EndOfTransfer",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_endpoint.html#3bd504d483b3e015cee4d1ebbc02dc1f",tooltip="Invokes the callback associated with a finished transfer on an endpoint."];
+  Node1 -> Node5 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node5 [label="CUdpDriver::GetPayload",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#fe791e9ab368f8413d2323b95a409460",tooltip="Transfers a data payload from an endpoint FIFO to the current transfer buffer."];
+  Node5 -> Node6 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node6 [label="min",height=0.2,width=0.4,color="black",URL="$common_8h.html#97a6b31fa879f6c56a1122dcf6b25dfe"];
+  Node1 -> Node7 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node7 [label="USB::CEventSink::OnNewRequest",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_event_sink.html#877065d65cda66442879aa5c299856ad",tooltip="New Request callback function."];
+  Node1 -> Node8 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node8 [label="CUdpDriver::SetEndpointFlags",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#6aa2661dfca334908398ec3a324f65f4",tooltip="Set flags in the UDP_CSR register and waits for synchronization."];
+  Node1 -> Node9 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node9 [label="CUdpDriver::WritePayload",height=0.2,width=0.4,color="black",URL="$class_c_udp_driver.html#aa4e67dd65350793ee1db8fde2f5cb7b",tooltip="Transfers a data payload from the current tranfer buffer to the endpoint FIFO."];
+  Node9 -> Node6 [color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+}

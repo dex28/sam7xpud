@@ -1,0 +1,21 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  rankdir=LR;
+  Node1 [label="XPI::RearrangePollList",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node2 [label="XPI::On_CRX",height=0.2,width=0.4,color="black",URL="$class_x_p_i.html#1c73bd96ebc42e8f5e14bb05c8cd3c86"];
+  Node2 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node3 [label="portTASK_FUNCTION",height=0.2,width=0.4,color="black",URL="$sam7xpud_8cpp.html#53afc651bc94988b4b1644f21f16b515"];
+  Node1 -> Node4 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node4 [label="XPI::PollNextBoard",height=0.2,width=0.4,color="black",URL="$class_x_p_i.html#2c5f810e83f5488bff8a7c2f63592352"];
+  Node4 -> Node2 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node4 -> Node5 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node5 [label="XPI::On_CTXE",height=0.2,width=0.4,color="black",URL="$class_x_p_i.html#05f87b3de493523ae34605fee0a8d46d"];
+  Node5 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node4 -> Node6 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node6 [label="XPI::On_Timer",height=0.2,width=0.4,color="black",URL="$class_x_p_i.html#efca43b014ac7287f1ee782a2db45682"];
+  Node6 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+}

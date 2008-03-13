@@ -1,0 +1,13 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  Node1 [label="{USB::S_std_descriptors\n|+ pDevice\l+ pConfiguration\l+ pStrings\l+ pEndpoints\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="pDevice",arrowtail="open",fontname="FreeSans"];
+  Node2 [label="{USB::S_usb_device_descriptor\n|+ bLength\l+ bDescriptorType\l+ bscUSB\l+ bDeviceClass\l+ bDeviceSubClass\l+ bDeviceProtocol\l+ bMaxPacketSize0\l+ idVendor\l+ idProduct\l+ bcdDevice\l+ iManufacturer\l+ iProduct\l+ iSerialNumber\l+ bNumConfigurations\l|}",height=0.2,width=0.4,color="black",URL="$struct_u_s_b_1_1_s__usb__device__descriptor.html",tooltip="This descriptor structure is used to provide information on various parameters of..."];
+  Node3 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="pEndpoints",arrowtail="open",fontname="FreeSans"];
+  Node3 [label="{USB::S_usb_endpoint_descriptor\n|+ bLength\l+ bDescriptorType\l+ bEndpointAddress\l+ bmAttributes\l+ wMaxPacketSize\l+ bInterval\l|}",height=0.2,width=0.4,color="black",URL="$struct_u_s_b_1_1_s__usb__endpoint__descriptor.html",tooltip="This structure is the standard endpoint descriptor. It contains the necessary information..."];
+  Node4 -> Node1 [dir=back,color="darkorchid3",fontsize=10,style="dashed",label="pConfiguration",arrowtail="open",fontname="FreeSans"];
+  Node4 [label="{USB::S_usb_configuration_descriptor\n|+ bLength\l+ bDescriptorType\l+ wTotalLength\l+ bNumInterfaces\l+ bConfigurationValue\l+ iConfiguration\l+ bmAttibutes\l+ bMaxPower\l|}",height=0.2,width=0.4,color="black",URL="$struct_u_s_b_1_1_s__usb__configuration__descriptor.html",tooltip="This is the standard configuration descriptor structure. It is used to report the..."];
+}

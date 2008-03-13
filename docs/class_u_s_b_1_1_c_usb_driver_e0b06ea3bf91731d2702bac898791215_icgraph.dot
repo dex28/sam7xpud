@@ -1,0 +1,10 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  rankdir=LR;
+  Node1 [label="USB::CUsbDriver::LinkTo",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node2 [label="USB::CSTD::CSTD",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_s_t_d.html#a359599b4f899358735b924c42a55763",tooltip="Constructor. Connects object to CUsbDriver instance."];
+}

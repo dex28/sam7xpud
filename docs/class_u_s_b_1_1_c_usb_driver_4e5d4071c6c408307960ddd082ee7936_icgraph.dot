@@ -1,0 +1,48 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize=10,labelfontname="FreeSans",labelfontsize=10];
+  node [fontname="FreeSans",fontsize=10,shape=record];
+  rankdir=LR;
+  Node1 [label="USB::CUsbDriver::Write",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node2 [label="USB::CSTD::GetConfiguration",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_s_t_d.html#438c2fb166291bba11741e1d158b6df3",tooltip="Sends the currently selected configuration to the host."];
+  Node2 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node3 [label="USB::CSTD::RequestHandler",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_s_t_d.html#e38a077457b22283969b6f5a270e9c2d",tooltip="Handles standard SETUP requests."];
+  Node3 -> Node4 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node4 [label="USB::CCDC::RequestHandler",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_c_d_c.html#825e8609b22bf0012d10a81248ff1bc5",tooltip="SETUP request handler for an Abstract Control Model device."];
+  Node4 -> Node5 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node5 [label="anonymous_namespace\{usbCallbacks::cpp\}::CCallbacks::OnNewRequest",height=0.2,width=0.4,color="black",URL="$classanonymous__namespace_02usb_callbacks_8cpp_03_1_1_c_callbacks.html#7dddf154c6c46790c76ece15a6338c81",tooltip="New Request callback function."];
+  Node1 -> Node6 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node6 [label="USB::CSTD::GetConfigurationDescriptor",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_s_t_d.html#c1a2be83c099f8a4773758d379346fca",tooltip="Sends the configuration descriptor to the host."];
+  Node6 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node1 -> Node7 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node7 [label="USB::CSTD::GetDeviceDescriptor",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_s_t_d.html#64390a146f8b0a0f8b59071730ced8d1",tooltip="Sends the device descriptor to the host."];
+  Node7 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node1 -> Node8 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node8 [label="USB::CSTD::GetDeviceStatus",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_s_t_d.html#85d8b67da9e0c9b66500b7fd453d7ddd",tooltip="Sends the current device status to the host."];
+  Node8 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node1 -> Node9 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node9 [label="USB::CSTD::GetEndpointStatus",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_s_t_d.html#f7dbc7bff8bf0f567b2935c05384e920",tooltip="Sends the current status of specified endpoint to the host."];
+  Node9 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node1 -> Node10 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node10 [label="USB::CSTD::GetStringDescriptor",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_s_t_d.html#1f7d664b3ca71f74cab096f6913e4b56",tooltip="Sends the specified string descriptor to the host."];
+  Node10 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node1 -> Node4 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node1 -> Node11 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node11 [label="USB::CUsbDriver::SendZLP0",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_usb_driver.html#3ed84ed3241def4a815480197c8c377c",tooltip="Sends a Zero-Length Packet (ZLP) through the Control endpoint 0."];
+  Node11 -> Node12 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node12 [label="USB::CCDC::OnSetLineCoding",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_c_d_c.html#01c5a2e076056f0cf178e85801bdbbe5",tooltip="Sets asynchronous line-character formatting properties."];
+  Node12 -> Node4 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node11 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node11 -> Node4 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node11 -> Node13 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node13 [label="USB::CSTD::SetConfiguration",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_s_t_d.html#863e89fa025dffd2edbab39887228f23",tooltip="Sends a zero-length packet and starts the configuration procedure."];
+  Node13 -> Node3 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node1 -> Node14 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node14 [label="USB::CCDC::Write",height=0.2,width=0.4,color="black",URL="$class_u_s_b_1_1_c_c_d_c.html#b4eea6b6c94feef3eca0d989b05c6739",tooltip="Sends data through the Data IN endpoint."];
+  Node14 -> Node15 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node15 [label="USBXMTR::Transmitter",height=0.2,width=0.4,color="black",URL="$class_u_s_b_x_m_t_r.html#3bf2078741857a3f8d71871b8eda79fd"];
+  Node15 -> Node16 [dir=back,color="midnightblue",fontsize=10,style="solid",fontname="FreeSans"];
+  Node16 [label="portTASK_FUNCTION",height=0.2,width=0.4,color="black",URL="$usb_tasks_8cpp.html#2ef57480262824233f0c45f5568d7ac5"];
+}
